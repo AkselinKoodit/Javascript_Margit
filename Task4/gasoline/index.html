@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gasoline</title>
+    <link rel="style.css" href="">
+</head>
+<body>
+    <h1>Let's calculate gasoline price!</h1>
+
+    <p>Give the price of the gasoline and amount of the money user has. The program calculates how much user get with the money. Result is displayed on screen.
+    </p>
+    <form>
+        <div>
+            <label for="price">Price</label>
+            <input type="text" id="price">
+        </div>
+        <div>
+            <label for="money">Money</label>
+            <input type="number" id="money">
+        </div>
+    </form>
+    <button onclick="calculate2(price, money)">Calculate</button>
+    <p>You can buy  <span id="answer"></span> of gasoline. <span id="solution"></span></p>
+<script src="app.js"></script>
+</body>
+</html>
