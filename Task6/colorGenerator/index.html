@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Akseli's amazing gradient background generator!</h1>
+
+        <form>
+            <h2>At first, choose the direction:</h2>
+            <div class="direction">
+                    <input checked type="radio" name="direction" id="toRight" value="to right">
+                    <label for="toRight">→</label>
+                    
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toLeft" value="to left">
+                    <label for="toLeft">←</label>
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toBottom" value="to bottom">
+                    <label for="toBottom">↓</label>
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toTop" value="to top">
+                    <label for="toTop">↑</label>
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toTopRight" value="to top right">
+                    <label for="toTop">&#x2197</label>
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toBottomRight" value="to bottom right">
+                    <label for="toBottomRight">&#x2198;</label>
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toBottomLeft" value="to bottom left">
+                    <label for="toBottomLeft">&#x2199;</label>
+            </div>
+            <div class="direction">
+                    <input type="radio" name="direction" id="toTopLeft" value="to top left">
+                    <label for="toTopLeft">	&#x2196</label>
+            </div>
+            <h2>Second, choose colors:</h2>
+            <div>
+                <input type="color" id="c1" value="#ffffff">
+                <input type="color" id="c2" value="#000000">
+            </div>
+
+            <h2>Third, generate your gradient:</h2>
+            <div>
+                <input type="submit" value="Generate!" id="generate">
+            </div>
+
+        </form>
+        <h2>Finally, copy your CSS code:</h2>
+        <p>
+        </p>
+        <script src="main.js"></script>
+</div>
+</body>
+</html>
