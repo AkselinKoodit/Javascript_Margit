@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speden pelit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Speedgame</h1>
+        <div id = "scoreboard">
+            You score: <p id="score"></p>
+        </div>
+        <div id="buttons">
+            <button class= "circle"></button>
+            <button class= "circle"></button>
+            <button class= "circle"></button>
+            <button class= "circle"></button>
+        </div>
+        <button class="controls" id = "start" onclick = "startGame()+playTheme()">Start</button>
+        <button class="controls" id = "stop" onclick= "endGame()">Stop</button>
+    </section>
+    <section id="result">
+        <div class= "gameoverbox">
+            <p>Game over. </p>
+            <p id="endScore"></p>
+            <div>
+                <button type="button" id="close" onclick="reloadGame()">Close</button>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script> 
+</body>
+</html>

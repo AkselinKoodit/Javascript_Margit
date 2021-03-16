@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("https://source.unsplash.com/zpxKdH_xNSI");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  background-attachment: fixed;
+}
+h1 {
+  margin: 1rem;
+}
+
+.circle {
+  border-radius: 50%;
+  padding: 50px;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+.circle:hover {
+  border: 2px solid #333;
+}
+
+.active {
+  background-image: url("devil.png");
+  background-color: black;
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: red; */
+}
+#result {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  background-image: linear-gradient(
+    to right,
+    rgba(228, 226, 226, 0.616),
+    rgba(255, 0, 0, 0.993)
+  );
+}
+.controls {
+  border-radius: 5px;
+  padding: 1rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(228, 226, 226, 0.616),
+    rgba(255, 0, 0, 0.315)
+  );
+  cursor: pointer;
+}
+.controls:hover {
+  border: 2px solid black;
+}
+section {
+  text-align: center;
+  width: 100vw;
+  height: 50vh;
+  margin-top: 20vh;
+  padding-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.671);
+}
+
+p {
+  display: inline;
+}
+.gameoverbox {
+  font-size: 2rem;
+}
+#close {
+  margin-top: 2rem;
+  border-radius: 5px;
+  padding: 1rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(228, 226, 226, 0.616),
+    rgba(255, 0, 0, 0.315)
+  );
+  cursor: pointer;
+}
+.invisible {
+  display: none;
+}
+.hidden {
+  visibility: hidden;
+}
+.clickMe {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.show {
+  display: block;
+}
