@@ -1,46 +1,3 @@
-// let text = document.querySelector("p");
-
-// let car = {
-//   mark: "Volvo",
-//   year: 2020,
-//   owner: "Urho Kekkonen",
-//   city: "Kuopio",
-//   calcAge: function () {
-//     //This is a method because function inside object
-//     this.age = 2021 - this.year;
-//     return this.age;
-//   },
-// };
-// console.log(car);
-// console.log(car.owner);
-// console.log(car.year);
-// car.color = "green";
-// console.log(car);
-// car.color = "white";
-// console.log(car);
-// delete car.city;
-// console.log(car);
-// console.log(car.owner, car.year);
-
-// text.textContent = `Your car is ${
-//   car.color
-// } color and it's ${car.calcAge()} years old`;
-
-// function Animals(name, sound, age, eye) {
-//   this.name = name;
-//   this.sound = sound;
-//   this.age = age;
-//   this.eye = eye;
-// }
-
-// let cat = new Animals("Herra Hakkarainen", "meow", 5, "green");
-// let dog = new Animals("Rekku", "woof!", 10, "brown");
-// console.log(cat);
-// console.log(dog.name);
-
-// let objectArray = [];
-// console.table(dog); // :O Awesome!
-
 function Car(licence, maker, model, price, color) {
   this.licence = licence;
   this.maker = maker;
@@ -61,8 +18,6 @@ let text = document.querySelector("p");
 
 let submit = document.getElementById("#submit");
 
-// let car = new Car(licence, maker, model, price, color);
-
 document.getElementById("submit").addEventListener("click", () => {
   let car = new Car();
   car.licence = document.getElementById("licence").value;
@@ -75,10 +30,6 @@ document.getElementById("submit").addEventListener("click", () => {
 
   console.table(cars);
 });
-// let n = 0;
-// while (n < cars.length) {
-//   text.textContent = cars[n];
-// }
 
 document.getElementById("searchInput").addEventListener("click", () => {
   let userInput = document.getElementById("licence").value;
@@ -91,7 +42,9 @@ document.getElementById("searchInput").addEventListener("click", () => {
         "Found it! The car maker is " +
         cars[i].maker +
         " and the model is " +
-        cars[i].model;
+        cars[i].model +
+        ". Discounted price is " +
+        countDiscount(cars[i]);
     }
     i++;
   }
@@ -102,3 +55,12 @@ document.getElementById("searchInput").addEventListener("click", () => {
 document.getElementById("clear").addEventListener("click", () => {
   document.getElementById("form").reset();
 });
+function countDiscount(car) {
+  if (car.price > 20000) {
+    return car.price * 0.75;
+  } else if (car.price < 5000) {
+    return car.price * 0.9;
+  } else {
+    return car.price * 0.85;
+  }
+}
